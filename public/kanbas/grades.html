@@ -7,122 +7,155 @@
     <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet" />
     <link href="kanbasnav.css" rel="stylesheet" />
+    <link href="subnavigation.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="row">
         <!--Kanbas Navigation-->
-        <div class="col">
+        <div class="col-4 sidebar">
             <ul>
-                <li> <a href="profile/index.html">Account</a> </li>
-                <li> <a href="dashboard.html">Dashboard</a> </li>
-                <li> <a href="courses.html">Courses</a> </li>
-                <li> <a href="#">Calendar</a> </li>
-                <li> <a href="#">Inbox</a> </li>
-                <li> <a href="#">History</a> </li>
-                <li> <a href="#">Studio</a> </li>
-                <li> <a href="#">Commons</a> </li>
-                <li> <a href="#">Help</a> </li>
+                <li><img src="../images/neu_logo.png" class="neu-logo" /></li>
+                <li><a href="profile/index.html"><i class="fa fa-user fa-2x account-icon"></i>Account</a>
+                </li>
+                <li><a href="dashboard.html"><i class="fa fa-tachometer-alt fa-2x icon"></i>Dashboard</a></li>
+                <li><a href="courses.html" class="selected-link"><i class="fa fa-book fa-2x icon"></i> Courses</a></li>
+                <li><a href="#"><i class="fa fa-calendar-alt fa-2x icon"></i>Calendar</a></li>
+                <li><a href="#"><i class="fa fa-inbox fa-2x icon"></i>Inbox</a></li>
+                <li><a href="#"><i class="fa fa-clock fa-2x icon"></i>History</a></li>
+                <li><a href="#"><i class="fa fa-desktop fa-2x icon"></i>Studio</a></li>
+                <li><a href="#"><i class="fa fa-arrow-right fa-2x icon"></i>Commons</a></li>
+                <li><a href="#"><i class="fa fa-question-circle fa-2x icon"></i>Help</a></li>
             </ul>
         </div>
 
-        <!--Course Navigation-->
-        <div class="col">
-            <ul>
-                <li> <a href="home.html">Home</a> </li>
-                <li> <a href="#">Modules</a> </li>
-                <li> <a href="#">Piazza</a> </li>
-                <li> <a href="#">Zoom Meetings</a> </li>
-                <li> <a href="assignments/index.html">Assignments</a> </li>
-                <li> <a href="#">Quizzes</a> </li>
-                <li> <a href="grades.html">Grades</a> </li>
-                <li> <a href="#">People</a> </li>
-                <li> <a href="#">Panopto Video</a> </li>
-                <li> <a href="#">Discussion</a> </li>
-                <li> <a href="#">Announcements</a> </li>
-                <li> <a href="#">Pages</a> </li>
-                <li> <a href="#">Files</a> </li>
-                <li> <a href="#">Rubrics</a> </li>
-                <li> <a href="#">Outcomes</a> </li>
-                <li> <a href="#">Collaborations</a> </li>
-                <li> <a href="#">Syllabus</a> </li>
-                <li> <a href="#">Settings</a> </li>
-            </ul>
-        </div>
+        <div class="col-10">
+            <div class="row">
+                <div class="col">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <i class="fa fa-bars fa-2x" style="color: darkred"></i>
+                            <li class="breadcrumb-item"><a href="home.html" class="redlinks"
+                                    style="font-size:20px;">CS4550.19753.202410</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" style="font-size:20px;">Grades
+                            </li>
+                        </ol>
+                    </nav>
+                    <hr>
 
-        <!--Grades-->
-        <div class="col">
-            <select>
-                <option value="GRADEBOOK">Gradebook</option>
-            </select>
-            <button type="button">Import</button>
-            <select>
-                <option value="EXPORT">Export</option>
-            </select>
-            <button type="button">Import</button>
+                    <div class="row">
+                        <!--Course Navigation-->
+                        <div class="col sub-nav">
+                            <ul>
+                                <li> <a href="home.html" class="unselected">Home</a> </li>
+                                <li> <a href="#" class="unselected">Modules</a> </li>
+                                <li> <a href="#" class="unselected">Piazza</a> </li>
+                                <li> <a href="#" class="unselected">Zoom Meetings</a> </li>
+                                <li> <a href="profile/index.html" class="unselected">Assignments</a> </li>
+                                <li> <a href="#" class="unselected">Quizzes</a> </li>
+                                <li> <a href="grades.html" class="selected">Grades</a> </li>
+                                <li> <a href="#" class="unselected">People</a> </li>
+                                <li> <a href="#" class="unselected">Panopto Video</a> </li>
+                                <li> <a href="#" class="unselected">Discussion</a> </li>
+                                <li> <a href="#" class="unselected">Announcements</a> </li>
+                                <li> <a href="#" class="unselected">Pages</a> </li>
+                                <li> <a href="#" class="unselected">Files</a> </li>
+                                <li> <a href="#" class="unselected">Rubrics</a> </li>
+                                <li> <a href="#" class="unselected">Outcomes</a> </li>
+                                <li> <a href="#" class="unselected">Collaborations</a> </li>
+                                <li> <a href="#" class="unselected">Syllabus</a> </li>
+                                <li> <a href="#" class="unselected">Settings</a> </li>
+                            </ul>
+                        </div>
 
-            <h2>Student Names</h2>
-            <form id="text-fields">
-                <input type="text" placeholder="Search Students" />
-            </form>
+                        <!--Grades-->
+                        <div class="col">
+                                <button type="button" class="btn btn-light float-end">
+                                    <i class="fa fa-gear"></i></button>
+                                <button type="button" class="btn btn-light dropdown-toggle float-end">
+                                    <i class="fa-solid fa-file-export"></i>Export</button>
+                                <button type="button" class="btn btn-light float-end">
+                                    <i class="fa-solid fa-file-import"></i>Import</button>
 
-            <h2>Assignment Names</h2>
-            <form id="text-fields">
-                <input type="text" placeholder="Search Assignments" />
-            </form>
-            <br />
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="form-label">
+                                            <h3>Student Names</h3>
+                                        </label>
+                                        <form id="student-search-form">
+                                            <input class="form-control" type="text" placeholder="Search Students" />
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">
+                                            <h3>Assignment Names</h3>
+                                        </label>
+                                        <form id="assignment-search-form">
+                                            <input class="form-control" type="text" placeholder="Search Assignments" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
 
-            <button type="button">Apply Filters</button> <br />
+                            <br />
 
-            <table border="2">
-                <thead>
-                    <tr>
-                        <th>Student Name</th>
-                        <th>A1 SETUP <br /> Out of 100</th>
-                        <th>A2 HTML <br /> Out of 100</th>
-                        <th>A3 CSS <br /> Out of 100</th>
-                        <th>A4 BOOTSTRAP <br /> Out of 100</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!--Adrian Tam-->
-                    <tr>
-                        <td>Adrian Tam</td>
-                        <td>95</td>
-                        <td> <input type="number" value="70" /> </td>
-                        <td>97</td>
-                        <td>100</td>
-                    </tr>
+                            <button type="button" class="btn btn-light">
+                                <i class="fa-solid fa-filter"></i>
+                                Apply Filters</button> <br />
 
-                    <!--Nagi Aboushaca-->
-                    <tr>
-                        <td>Nagi Aboushaca</td>
-                        <td>69</td>
-                        <td>90</td>
-                        <td> <input type="number" value="83" /> </td>
-                        <td>94</td>
-                    </tr>
+                            <table border="2" class="table">
+                                <thead>
+                                    <tr class="table-light">
+                                        <th>Student Name</th>
+                                        <th>A1 SETUP <br /> Out of 100</th>
+                                        <th>A2 HTML <br /> Out of 100</th>
+                                        <th>A3 CSS <br /> Out of 100</th>
+                                        <th>A4 BOOTSTRAP <br /> Out of 100</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--Adrian Tam-->
+                                    <tr>
+                                        <td style="color:red">Adrian Tam</td>
+                                        <td>95</td>
+                                        <td> <input type="number" value="70" /> </td>
+                                        <td>97</td>
+                                        <td>100</td>
+                                    </tr>
 
-                    <!--Ren Taguchi-->
-                    <tr>
-                        <td>Ren Taguchi</td>
-                        <td>85</td>
-                        <td>100</td>
-                        <td>76</td>
-                        <td> <input type="number" value="95" /> </td>
-                    </tr>
+                                    <!--Nagi Aboushaca-->
+                                    <tr class="table-light">
+                                        <td style="color:red">Nagi Aboushaca</td>
+                                        <td>69</td>
+                                        <td>90</td>
+                                        <td> <input type="number" value="83" /> </td>
+                                        <td>94</td>
+                                    </tr>
 
-                    <!--Ahmad Shehadeh-->
-                    <tr>
-                        <td>Ahmad Shehadeh</td>
-                        <td> <input type="number" value="87" /> </td>
-                        <td>67</td>
-                        <td>90</td>
-                        <td>96</td>
-                    </tr>
-                </tbody>
-            </table>
+                                    <!--Ren Taguchi-->
+                                    <tr>
+                                        <td style="color:red">Ren Taguchi</td>
+                                        <td>85</td>
+                                        <td>100</td>
+                                        <td>76</td>
+                                        <td> <input type="number" value="95" /> </td>
+                                    </tr>
 
+                                    <!--Ahmad Shehadeh-->
+                                    <tr class="table-light">
+                                        <td style="color:red">Ahmad Shehadeh</td>
+                                        <td> <input type="number" value="87" /> </td>
+                                        <td>67</td>
+                                        <td>90</td>
+                                        <td>96</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
