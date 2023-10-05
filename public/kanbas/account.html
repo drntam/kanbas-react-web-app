@@ -4,44 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Account</title>
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <link href="navigation.css" rel="stylesheet" />
 </head>
 
 <body>
-    <table>
-        <tbody>
-            <tr valign="top">
-                <!--Kanbas Navigation-->
-                <td>
-                    <ul>
-                        <li> <a href="account.html">Account</a> </li>
-                        <li> <a href="#">Dashboard</a> </li>
-                        <li> <a href="courses.html">Courses</a> </li>
-                        <li> <a href="#">Calendar</a> </li>
-                        <li> <a href="#">Inbox</a> </li>
-                        <li> <a href="#">History</a> </li>
-                        <li> <a href="#">Studio</a> </li>
-                        <li> <a href="#">Commons</a> </li>
-                        <li> <a href="#">Help</a> </li>
-                    </ul>
-                </td>
+    <div class="row">
+        <!--Kanbas Navigation-->
+        <div class="col-3 sidebar">
+            <ul>
+                <li><img src="../images/neu_logo.png" class="neu-logo" /></li>
+                <li><a href="account.html" class="selected-link"><i class="fa fa-user fa-2x account-icon"></i>Account</a></li>
+                <li><a href="dashboard.html"><i class="fa fa-tachometer-alt fa-2x icon"></i> Dashboard</a></li>
+                <li><a href="courses.html"><i class="fa fa-book fa-2x icon"></i> Courses</a></li>
+                <li><a href="#"><i class="fa fa-calendar-alt fa-2x icon"></i> Calendar</a></li>
+                <li><a href="#"><i class="fa fa-inbox fa-2x icon"></i> Inbox</a></li>
+                <li><a href="#"><i class="fa fa-clock fa-2x icon"></i> History</a></li>
+                <li><a href="#"><i class="fa fa-desktop fa-2x icon"></i> Studio</a></li>
+                <li><a href="#"><i class="fa fa-arrow-right fa-2x icon"></i> Commons</a></li>
+                <li><a href="#"><i class="fa fa-question-circle fa-2x icon"></i> Help</a></li>
+            </ul>
+        </div>
 
-                <!--Profile Navigation-->
-                <td>
-                    <ul>
-                        <li> <a href="#">Notifications</a> </li>
-                        <li> <a href="profile/index.html">Profile</a> </li>
-                        <li> <a href="#">Files</a> </li>
-                        <li> <a href="#">Settings</a> </li>
-                        <li> <a href="#">ePortfolios</a> </li>
-                        <li> <a href="#">Shared Content</a> </li>
-                        <li> <a href="#">The Hub</a> </li>
-                        <li> <a href="#">Qwickly Course Tools</a> </li>
-                        <li> <a href="#">Global Announcements</a> </li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <!--Profile Navigation-->
+        <div class="col-9">
+            <ul>
+                <li> <a href="#">Notifications</a> </li>
+                <li> <a href="profile/index.html">Profile</a> </li>
+                <li> <a href="#">Files</a> </li>
+                <li> <a href="#">Settings</a> </li>
+                <li> <a href="#">ePortfolios</a> </li>
+                <li> <a href="#">Shared Content</a> </li>
+                <li> <a href="#">The Hub</a> </li>
+                <li> <a href="#">Qwickly Course Tools</a> </li>
+                <li> <a href="#">Global Announcements</a> </li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>

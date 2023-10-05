@@ -1,0 +1,52 @@
+.sidebar {
+    background-color: black;
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+}
+
+.sidebar ul {
+    padding-left: 0;
+}
+
+.sidebar li {
+    text-align: center;
+    margin-bottom: 7px;
+    width: 100%;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.icon {
+    color: red;
+    width: 24px;
+    height: 24px;
+}
+
+.account-icon {
+    color: grey;
+    width: 24px;
+    height: 24px;
+}
+
+.neu-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.sidebar .selected-link {
+    background-color: white;
+    color: red;
+    width: 100%;
+}
