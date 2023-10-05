@@ -1,0 +1,26 @@
+.account-nav {
+    width: 190px;
+}
+
+.account-nav a {
+    text-decoration: none;
+}
+
+.account-nav ul {
+    list-style: none;
+}
+
+.account-nav li {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.account-nav .unselected {
+    color: darkred;
+}
+
+.account-nav .selected {
+    color: black;
+    padding: 4px;
+    border-left: 2px solid black;
+}

@@ -29,7 +29,7 @@
 }
 
 .icon {
-    color: red;
+    color: darkred;
     width: 24px;
     height: 24px;
 }
@@ -47,6 +47,11 @@
 
 .sidebar .selected-link {
     background-color: white;
-    color: red;
+    color: darkred;
     width: 100%;
+}
+
+.redlinks {
+    color: darkred;
+    text-decoration: none;
 }
