@@ -1,0 +1,40 @@
+.assignments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assignments-header input[type="text"] {
+    width: 300px;
+    padding: 10px;
+}
+
+.assignments-section {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list-group-item {
+    padding: 20px;
+}
+
+.list-group-item .align-middle {
+    display: inline;
+    vertical-align: middle;
+    margin-top: 150px;
+}
+
+.list-group-item .float-end {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.list-group-item .fa-check-circle {
+    color: green;
+    margin-top: 30px;
+}
+
+.list-group-item .fa-pen-to-square {
+    margin-top: 30px;
+    color: green;
+}

@@ -1,0 +1,35 @@
+.home-modules ul {
+    border-radius: 0%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.module-title{
+    font-weight: bold;
+}
+
+.module-title {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+}
+
+.complete-modules li {
+    border-left: 4px solid green;
+}
+
+.module-name {
+    margin-left: 10px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.module-description li {
+    padding-left: 80px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-left: 4px solid green;
+    font-weight: bold;
+}

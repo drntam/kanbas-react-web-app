@@ -1,0 +1,74 @@
+.assignments-page {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.assignments-header button {
+    margin-right: 5px;
+}
+
+.search-assignment {
+    margin-right: 495px;
+}
+
+.buttons-assignments-top {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.arrow-assignments {
+    padding: 5px;
+}
+
+.btns-assignment i {
+    padding: 8px;
+}
+
+.wd-text-color-black {
+    color: black;
+}
+
+.border-green-left {
+    border-left: 4px solid green;
+}
+
+.assignment-item p {
+    font-size: 0.8em;
+    padding-right: 300px;
+}
+
+.assignment-item {
+    border-left: 2px solid green;
+}
+
+.assignment-title {
+    font-weight: 500;
+    padding: 10px;
+}
+
+.assignment-title-group {
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.check-assignment {
+    margin-right: 30px;
+}
+
+.student-view {
+    position: absolute;
+    margin-left: 5px;
+    top: -30px;
+    right: 40px;
+    z-index: 9999;
+}
+
+.assignment-details {
+    margin-left: 25px;
+}

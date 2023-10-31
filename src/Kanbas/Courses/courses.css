@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    padding-top: 20px;
+}
+
+.header span {
+    padding-left: 15px;
+}
+
+.course-header {
+    color: darkred;
+}

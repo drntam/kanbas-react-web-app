@@ -1,0 +1,58 @@
+.sidebar {
+    background-color: black;
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+}
+
+.sidebar ul {
+    padding-left: 0;
+}
+
+.sidebar li {
+    text-align: center;
+    margin-bottom: 7px;
+    width: 100%;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.sidebar .inactive-link {
+    background-color: black;
+    color: darkred;
+    width: 100%;
+}
+
+.sidebar .active-link {
+    background-color: white;
+    color: darkred;
+    width: 100%;
+}
+
+.neu-logo {
+    width: 80px;
+    height: 80px;
+}
+
+/* .redlinks {
+    color: darkred;
+    text-decoration: none;
+}
+
+.blacklinks {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+} */

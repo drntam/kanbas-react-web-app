@@ -1,0 +1,21 @@
+.assignment-name {
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: 250;
+}
+
+.assignment-name-input {
+    margin-top: 5px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.published-icon {
+    margin-right: 5px;
+    color: green;
+}
+
+.published {
+    color: green;
+}
