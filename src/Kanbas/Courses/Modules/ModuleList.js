@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "./modulelist.css";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { BsPlus } from "react-icons/bs";
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+} from "./modulesReducer";
 
 
 function ModuleList() {
     const { courseId } = useParams();
-    const modules = db.modules;
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
+
+
+
 
     return (
         <div className="home-modules">
@@ -58,6 +70,21 @@ function ModuleList() {
                     <BsThreeDotsVertical />
                 </li>
 
+                {/* Add or Update Module and Description*/}
+                <li className="list-group-item">
+                    <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                        Add </button>
+                    <button onClick={() => dispatch(updateModule(module))}>
+                        Update </button>
+
+                    <input value={module.name}
+                        onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
+                    />
+                    <textarea value={module.description}
+                        onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
+                    />
+                </li>
+
                 {/* Module List For the Week*/}
                 {modules
                     .filter((module) => module.course === courseId)
@@ -72,7 +99,15 @@ function ModuleList() {
                                     <span className="module-name wd-flex-row-container">
                                         {module.name}
                                     </span>
+
                                     <div>
+                                        {/* Edit and Delete Button */}
+                                        <button onClick={() => dispatch(setModule(module))}>
+                                            Edit
+                                        </button>
+                                        <button onClick={() => dispatch(deleteModule(module._id))}>
+                                            Delete
+                                        </button>
                                         <BsCheckCircleFill color={"green"} />
                                         <BsThreeDotsVertical />
                                     </div>
@@ -85,6 +120,7 @@ function ModuleList() {
                                     key={index}
                                     className="list-group-item d-flex justify-content-between align-items-center"
                                 >
+
                                     {module.description}
 
                                     <div>
