@@ -72,17 +72,27 @@ function ModuleList() {
 
                 {/* Add or Update Module and Description*/}
                 <li className="list-group-item">
-                    <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
-                        Add </button>
-                    <button onClick={() => dispatch(updateModule(module))}>
-                        Update </button>
+                    <div className="row d-flex justify-content-between">
+                        <div className="col-9 edit-module-box">
+                            <input value={module.name}
+                                onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
+                            />
+                            <textarea value={module.description}
+                                onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
+                            />
+                        </div>
 
-                    <input value={module.name}
-                        onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
-                    />
-                    <textarea value={module.description}
-                        onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
-                    />
+                        <div className="col-3 justify-content-end add-update-btns">
+                            <button
+                                className="btn btn-danger"
+                                onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                                Add </button>
+                            <button
+                                className="btn btn-primary"
+                                onClick={() => dispatch(updateModule(module))}>
+                                Update </button>
+                        </div>
+                    </div>
                 </li>
 
                 {/* Module List For the Week*/}
@@ -102,12 +112,20 @@ function ModuleList() {
 
                                     <div>
                                         {/* Edit and Delete Button */}
-                                        <button onClick={() => dispatch(setModule(module))}>
-                                            Edit
-                                        </button>
-                                        <button onClick={() => dispatch(deleteModule(module._id))}>
-                                            Delete
-                                        </button>
+
+                                        <span className="edit-delete-btns">
+                                            <button
+                                                className="btn btn-light"
+                                                onClick={() => dispatch(setModule(module))}>
+                                                Edit
+                                            </button>
+                                            <button
+                                                className="btn btn-danger"
+                                                onClick={() => dispatch(deleteModule(module._id))}>
+                                                Delete
+                                            </button>
+                                        </span>
+
                                         <BsCheckCircleFill color={"green"} />
                                         <BsThreeDotsVertical />
                                     </div>

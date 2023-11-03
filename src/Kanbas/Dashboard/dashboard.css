@@ -6,9 +6,35 @@
     width: 250px;
     margin-right: 30px;
     margin-bottom: 30px;
-    
+
 }
 
 .custom-list-item {
     border: none;
+}
+
+
+.edit-courses {
+    margin-left: 40px;
+}
+
+.edit-courses button {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.edit-courses input {
+    margin-top: 10px;
+    width: 50%;
+}
+
+.edit-delete button{
+    margin-right: 10px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.dates-input {
+    position: relative;
+    right: 320px;
 }

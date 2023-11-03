@@ -19,22 +19,50 @@ function Dashboard({
             <h3>Published Courses ({courses.length})</h3>
             <hr></hr>
 
-            <h5>Course</h5>
-            <input placeholder={course.name} className="form-control"
-                onChange={(e) => setCourse({ ...course, name: e.target.value })} />
-            <input placeholder={course.number} className="form-control"
-                onChange={(e) => setCourse({ ...course, number: e.target.value })} />
-            <input value={course.startDate} className="form-control" type="date"
-                onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
-            <input value={course.endDate} className="form-control" type="date"
-                onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
+            <div className="edit-courses">
+                <h5>Course</h5>
 
-            <button onClick={addNewCourse} >
-                Add
-            </button>
-            <button onClick={updateCourse} >
-                Update
-            </button>
+                <div className="row justify-content-start">
+                    <div className="col-6">
+                        <input
+                            value={course.name}
+                            className="form-control"
+                            onChange={(e) => setCourse({ ...course, name: e.target.value })}
+                        />
+                        <input
+                            value={course.number}
+                            className="form-control"
+                            onChange={(e) => setCourse({ ...course, number: e.target.value })}
+                        />
+                    </div>
+                    
+                    <div className="col-4 dates-input">
+                        <input
+                            value={course.startDate}
+                            className="form-control"
+                            type="date"
+                            onChange={(e) => setCourse({ ...course, startDate: e.target.value })}
+                        />
+                        <input
+                            value={course.endDate}
+                            className="form-control"
+                            type="date"
+                            onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
+                        />
+                    </div>
+                </div>
+
+                <button
+                    className="btn btn-danger"
+                    onClick={addNewCourse} >
+                    Add
+                </button>
+                <button
+                    className="btn btn-danger"
+                    onClick={updateCourse} >
+                    Update
+                </button>
+            </div>
 
 
 
@@ -54,6 +82,7 @@ function Dashboard({
 
                                     <div className="edit-delete">
                                         <button
+                                            className="btn btn-danger"
                                             onClick={(event) => {
                                                 event.preventDefault();
                                                 setCourse(course);
@@ -61,6 +90,7 @@ function Dashboard({
                                             Edit
                                         </button>
                                         <button
+                                            className="btn btn-danger"
                                             onClick={(event) => {
                                                 event.preventDefault();
                                                 deleteCourse(course._id);

@@ -33,3 +33,25 @@
     border-left: 4px solid green;
     font-weight: bold;
 }
+
+.edit-module-box {
+    margin-top: 5px;
+}
+
+.edit-module-box input {
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.edit-module-box input, textarea {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.add-update-btns button{
+    margin-right: 5px;
+}
+
+.edit-delete-btns button {
+    margin-right: 5px;
+}

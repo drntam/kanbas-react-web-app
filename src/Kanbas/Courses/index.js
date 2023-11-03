@@ -15,8 +15,7 @@ function Courses({ courses }) {
     return (
         <div>
             <div className="header">
-                <FaBars color={"darkred"} size={27} className="menu-bar" />
-                <span className="course-header">{courseId} 01 FA23</span>{" "}
+            <FaBars color={"darkred"} size={27} className="menu-bar" />
             </div>
             <hr></hr>
 
@@ -31,12 +30,12 @@ function Courses({ courses }) {
                 >
                     <Routes>
                         <Route path="/" element={<Navigate to="Home" />} />
-                        <Route path="Home" element={<Home/>} />
-                        <Route path="Modules" element={<Modules/>} />
-                        <Route path="Assignments" element={<Assignments/>} />
+                        <Route path="Home" element={<Home />} />
+                        <Route path="Modules" element={<Modules />} />
+                        <Route path="Assignments" element={<Assignments />} />
                         <Route
                             path="Assignments/:assignmentId"
-                            element={<AssignmentEditor/>}/>
+                            element={<AssignmentEditor />} />
                         <Route path="Grades" element={<h1>Grades</h1>} />
                     </Routes>
                 </div>

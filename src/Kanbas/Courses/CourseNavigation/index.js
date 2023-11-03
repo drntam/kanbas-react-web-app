@@ -34,7 +34,8 @@ function CourseNavigation() {
                             <ol class="breadcrumb d-none d-md-block">
                                 <li class="breadcrumb-item active" aria-current="page">
                                     <div className="course-nav-top">
-                                        <IoIosArrowForward className="breadcrumb-arrow" />
+                                        <span className="course-header">{courseId} 01 FA23</span>{" "}
+                                        <IoIosArrowForward className="breadcrumb-arrow" /> {" "}
                                         <span className="course-header-nav">{link}</span>
                                     </div>
                                 </li>
