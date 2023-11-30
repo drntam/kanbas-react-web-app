@@ -10,6 +10,8 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function Courses() {
     const { courseId } = useParams();
     const URL = "http://localhost:4000/api/courses";

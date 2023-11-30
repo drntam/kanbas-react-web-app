@@ -20,13 +20,6 @@ import * as client from "./client";
 function ModuleList() {
     const { courseId } = useParams();
 
-    useEffect(() => {
-        findModulesForCourse(courseId)
-            .then((modules) =>
-                dispatch(setModules(modules))
-            );
-    }, [courseId]);
-
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
@@ -48,6 +41,12 @@ function ModuleList() {
         dispatch(updateModule(module));
       };
     
+      useEffect(() => {
+        findModulesForCourse(courseId)
+            .then((modules) =>
+                dispatch(setModules(modules))
+            );
+    }, [courseId]);
 
     return (
         <div className="home-modules">
