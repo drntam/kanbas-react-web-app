@@ -14,6 +14,9 @@ function Signin() {
       <input value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
       <input value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})}/>
       <button onClick={signin}> Signin </button>
+      <hr></hr>
+      <span>Don't have an account? </span>
+      <a href="/#/Kanbas/signup">Signup</a>
     </div>
   );
 }
