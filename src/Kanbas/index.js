@@ -7,11 +7,16 @@ import { useEffect, useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
+import Signin from "../users/signin";
+import Account from "../users/account";
+import UserTable from "../users/table";
+import Signup from "../users/signup";
 
+const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000/api";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
-  const URL = "http://localhost:4000/api/courses";
+  const URL = `${API_BASE}/courses`;
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
@@ -61,8 +66,9 @@ function Kanbas() {
 
           <div className="col">
             <Routes>
-              <Route path="/" element={<Navigate to="Dashboard" />} />
-              <Route path="Account" element={<h1>Account</h1>} />
+              <Route path="/" element={<Navigate to="Dashboard" />} /> {/*Navigates to dashboard*/}
+              <Route path="Account" element={<Account />} /> {/* Navigates to account when signed in*/}
+              <Route path="/account/:id" element={<Account />} /> {/* Navigates to specific user's account */}
               <Route path="Dashboard" element={
                 <Dashboard
                   courses={courses}
@@ -70,8 +76,11 @@ function Kanbas() {
                   setCourse={setCourse}
                   addNewCourse={addNewCourse}
                   deleteCourse={deleteCourse}
-                  updateCourse={updateCourse} />} />
-              <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
+                  updateCourse={updateCourse} />} /> 
+              <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} /> {/* Navigates to specific course*/}
+              <Route path="/signin" element={<Signin />} /> {/* Navigates to sign in screen*/}
+              <Route path="/admin/users" element={<UserTable />} /> {/* Navigates to list of users*/}
+              <Route path="/signup" element={<Signup />} /> {/* Navigates to sign up screen*/}
             </Routes>
 
           </div>

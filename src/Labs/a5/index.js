@@ -2,7 +2,7 @@ import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import WorkingWithObjects from "./WorkingWithObjects";
 import WorkingWithArrays from "./WorkingWithArrays";
 
-const LAB_BASE = process.env.REACT_APP_LAB_BASE;
+const LAB_BASE = process.env.REACT_APP_LAB_BASE || "http://localhost:4000/a5";
 const WELCOME_URL = `${LAB_BASE}/welcome`;
 
 function Assignment5() {

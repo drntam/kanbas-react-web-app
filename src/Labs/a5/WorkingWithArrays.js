@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const LAB_BASE = process.env.REACT_APP_LAB_BASE;
+const LAB_BASE = process.env.REACT_APP_LAB_BASE || "http://localhost:4000/a5";
 const TODOS_URL = `${LAB_BASE}/todos`;
 
 function WorkingWithArrays() {

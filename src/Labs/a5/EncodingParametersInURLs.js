@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const LAB_BASE = process.env.REACT_APP_LAB_BASE;
+const LAB_BASE = process.env.REACT_APP_LAB_BASE || "http://localhost:4000/a5";
 const ADD_URL = `${LAB_BASE}/add`;
 const SUBTRACT_URL = `${LAB_BASE}/subtract`;
 const WELCOME_URL = `${LAB_BASE}/welcome`;
